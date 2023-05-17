@@ -1,0 +1,6444 @@
+{
+  "Gender": {
+    "FEMALE": "female",
+    "MALE": "male"
+  },
+  "TinyYolov2SizeType": {
+    "224": "XS",
+    "320": "SM",
+    "416": "MD",
+    "608": "LG",
+    "XS": 224,
+    "SM": 320,
+    "MD": 416,
+    "LG": 608
+  },
+  "FACE_EXPRESSION_LABELS": [
+    "neutral",
+    "happy",
+    "sad",
+    "angry",
+    "fearful",
+    "disgusted",
+    "surprised"
+  ],
+  "draw": {},
+  "env": {},
+  "nets": {
+    "ssdMobilenetv1": {
+      "_name": "SsdMobilenetv1",
+      "_params": {
+        "mobilenetv1": {
+          "conv_0": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                3,
+                3,
+                3,
+                32
+              ],
+              "dtype": "float32",
+              "size": 864,
+              "strides": [
+                288,
+                96,
+                32
+              ],
+              "dataId": {},
+              "id": 35,
+              "rankType": "4"
+            },
+            "batch_norm_offset": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                32
+              ],
+              "dtype": "float32",
+              "size": 32,
+              "strides": [],
+              "dataId": {},
+              "id": 36,
+              "rankType": "1"
+            }
+          },
+          "conv_1": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 288,
+                "strides": [
+                  96,
+                  32,
+                  1
+                ],
+                "dataId": {},
+                "id": 37,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 38,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 39,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 40,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 41,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  32,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 2048,
+                "strides": [
+                  2048,
+                  2048,
+                  64
+                ],
+                "dataId": {},
+                "id": 42,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 43,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_2": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 576,
+                "strides": [
+                  192,
+                  64,
+                  1
+                ],
+                "dataId": {},
+                "id": 44,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 45,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 46,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 47,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 48,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  64,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 8192,
+                "strides": [
+                  8192,
+                  8192,
+                  128
+                ],
+                "dataId": {},
+                "id": 49,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 50,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_3": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 1152,
+                "strides": [
+                  384,
+                  128,
+                  1
+                ],
+                "dataId": {},
+                "id": 51,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 52,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 53,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 54,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 55,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 16384,
+                "strides": [
+                  16384,
+                  16384,
+                  128
+                ],
+                "dataId": {},
+                "id": 56,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 57,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_4": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 1152,
+                "strides": [
+                  384,
+                  128,
+                  1
+                ],
+                "dataId": {},
+                "id": 58,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 59,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 60,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 61,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 62,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  128,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 32768,
+                "strides": [
+                  32768,
+                  32768,
+                  256
+                ],
+                "dataId": {},
+                "id": 63,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 64,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_5": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 2304,
+                "strides": [
+                  768,
+                  256,
+                  1
+                ],
+                "dataId": {},
+                "id": 65,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 66,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 67,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 68,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 69,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 65536,
+                "strides": [
+                  65536,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 70,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 71,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_6": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 2304,
+                "strides": [
+                  768,
+                  256,
+                  1
+                ],
+                "dataId": {},
+                "id": 72,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 73,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 74,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 75,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 76,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  256,
+                  512
+                ],
+                "dtype": "float32",
+                "size": 131072,
+                "strides": [
+                  131072,
+                  131072,
+                  512
+                ],
+                "dataId": {},
+                "id": 77,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 78,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_7": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  512,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 4608,
+                "strides": [
+                  1536,
+                  512,
+                  1
+                ],
+                "dataId": {},
+                "id": 79,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 80,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 81,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 82,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 83,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "size": 262144,
+                "strides": [
+                  262144,
+                  262144,
+                  512
+                ],
+                "dataId": {},
+                "id": 84,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 85,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_8": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  512,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 4608,
+                "strides": [
+                  1536,
+                  512,
+                  1
+                ],
+                "dataId": {},
+                "id": 86,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 87,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 88,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 89,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 90,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "size": 262144,
+                "strides": [
+                  262144,
+                  262144,
+                  512
+                ],
+                "dataId": {},
+                "id": 91,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 92,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_9": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  512,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 4608,
+                "strides": [
+                  1536,
+                  512,
+                  1
+                ],
+                "dataId": {},
+                "id": 93,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 94,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 95,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 96,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 97,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "size": 262144,
+                "strides": [
+                  262144,
+                  262144,
+                  512
+                ],
+                "dataId": {},
+                "id": 98,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 99,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_10": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  512,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 4608,
+                "strides": [
+                  1536,
+                  512,
+                  1
+                ],
+                "dataId": {},
+                "id": 100,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 101,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 102,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 103,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 104,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "size": 262144,
+                "strides": [
+                  262144,
+                  262144,
+                  512
+                ],
+                "dataId": {},
+                "id": 105,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 106,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_11": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  512,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 4608,
+                "strides": [
+                  1536,
+                  512,
+                  1
+                ],
+                "dataId": {},
+                "id": 107,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 108,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 109,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 110,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 111,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  512
+                ],
+                "dtype": "float32",
+                "size": 262144,
+                "strides": [
+                  262144,
+                  262144,
+                  512
+                ],
+                "dataId": {},
+                "id": 112,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 113,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_12": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  512,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 4608,
+                "strides": [
+                  1536,
+                  512,
+                  1
+                ],
+                "dataId": {},
+                "id": 114,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 115,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 116,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 117,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  512
+                ],
+                "dtype": "float32",
+                "size": 512,
+                "strides": [],
+                "dataId": {},
+                "id": 118,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  1024
+                ],
+                "dtype": "float32",
+                "size": 524288,
+                "strides": [
+                  524288,
+                  524288,
+                  1024
+                ],
+                "dataId": {},
+                "id": 119,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1024
+                ],
+                "dtype": "float32",
+                "size": 1024,
+                "strides": [],
+                "dataId": {},
+                "id": 120,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv_13": {
+            "depthwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  1024,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 9216,
+                "strides": [
+                  3072,
+                  1024,
+                  1
+                ],
+                "dataId": {},
+                "id": 121,
+                "rankType": "4"
+              },
+              "batch_norm_scale": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1024
+                ],
+                "dtype": "float32",
+                "size": 1024,
+                "strides": [],
+                "dataId": {},
+                "id": 122,
+                "rankType": "1"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1024
+                ],
+                "dtype": "float32",
+                "size": 1024,
+                "strides": [],
+                "dataId": {},
+                "id": 123,
+                "rankType": "1"
+              },
+              "batch_norm_mean": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1024
+                ],
+                "dtype": "float32",
+                "size": 1024,
+                "strides": [],
+                "dataId": {},
+                "id": 124,
+                "rankType": "1"
+              },
+              "batch_norm_variance": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1024
+                ],
+                "dtype": "float32",
+                "size": 1024,
+                "strides": [],
+                "dataId": {},
+                "id": 125,
+                "rankType": "1"
+              }
+            },
+            "pointwise_conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  1024,
+                  1024
+                ],
+                "dtype": "float32",
+                "size": 1048576,
+                "strides": [
+                  1048576,
+                  1048576,
+                  1024
+                ],
+                "dataId": {},
+                "id": 126,
+                "rankType": "4"
+              },
+              "batch_norm_offset": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1024
+                ],
+                "dtype": "float32",
+                "size": 1024,
+                "strides": [],
+                "dataId": {},
+                "id": 127,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "prediction_layer": {
+          "conv_0": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                1,
+                1,
+                1024,
+                256
+              ],
+              "dtype": "float32",
+              "size": 262144,
+              "strides": [
+                262144,
+                262144,
+                256
+              ],
+              "dataId": {},
+              "id": 128,
+              "rankType": "4"
+            },
+            "batch_norm_offset": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                256
+              ],
+              "dtype": "float32",
+              "size": 256,
+              "strides": [],
+              "dataId": {},
+              "id": 129,
+              "rankType": "1"
+            }
+          },
+          "conv_1": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                3,
+                3,
+                256,
+                512
+              ],
+              "dtype": "float32",
+              "size": 1179648,
+              "strides": [
+                393216,
+                131072,
+                512
+              ],
+              "dataId": {},
+              "id": 130,
+              "rankType": "4"
+            },
+            "batch_norm_offset": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                512
+              ],
+              "dtype": "float32",
+              "size": 512,
+              "strides": [],
+              "dataId": {},
+              "id": 131,
+              "rankType": "1"
+            }
+          },
+          "conv_2": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                1,
+                1,
+                512,
+                128
+              ],
+              "dtype": "float32",
+              "size": 65536,
+              "strides": [
+                65536,
+                65536,
+                128
+              ],
+              "dataId": {},
+              "id": 132,
+              "rankType": "4"
+            },
+            "batch_norm_offset": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                128
+              ],
+              "dtype": "float32",
+              "size": 128,
+              "strides": [],
+              "dataId": {},
+              "id": 133,
+              "rankType": "1"
+            }
+          },
+          "conv_3": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                3,
+                3,
+                128,
+                256
+              ],
+              "dtype": "float32",
+              "size": 294912,
+              "strides": [
+                98304,
+                32768,
+                256
+              ],
+              "dataId": {},
+              "id": 134,
+              "rankType": "4"
+            },
+            "batch_norm_offset": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                256
+              ],
+              "dtype": "float32",
+              "size": 256,
+              "strides": [],
+              "dataId": {},
+              "id": 135,
+              "rankType": "1"
+            }
+          },
+          "conv_4": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                1,
+                1,
+                256,
+                128
+              ],
+              "dtype": "float32",
+              "size": 32768,
+              "strides": [
+                32768,
+                32768,
+                128
+              ],
+              "dataId": {},
+              "id": 136,
+              "rankType": "4"
+            },
+            "batch_norm_offset": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                128
+              ],
+              "dtype": "float32",
+              "size": 128,
+              "strides": [],
+              "dataId": {},
+              "id": 137,
+              "rankType": "1"
+            }
+          },
+          "conv_5": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                3,
+                3,
+                128,
+                256
+              ],
+              "dtype": "float32",
+              "size": 294912,
+              "strides": [
+                98304,
+                32768,
+                256
+              ],
+              "dataId": {},
+              "id": 138,
+              "rankType": "4"
+            },
+            "batch_norm_offset": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                256
+              ],
+              "dtype": "float32",
+              "size": 256,
+              "strides": [],
+              "dataId": {},
+              "id": 139,
+              "rankType": "1"
+            }
+          },
+          "conv_6": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                1,
+                1,
+                256,
+                64
+              ],
+              "dtype": "float32",
+              "size": 16384,
+              "strides": [
+                16384,
+                16384,
+                64
+              ],
+              "dataId": {},
+              "id": 140,
+              "rankType": "4"
+            },
+            "batch_norm_offset": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                64
+              ],
+              "dtype": "float32",
+              "size": 64,
+              "strides": [],
+              "dataId": {},
+              "id": 141,
+              "rankType": "1"
+            }
+          },
+          "conv_7": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                3,
+                3,
+                64,
+                128
+              ],
+              "dtype": "float32",
+              "size": 73728,
+              "strides": [
+                24576,
+                8192,
+                128
+              ],
+              "dataId": {},
+              "id": 142,
+              "rankType": "4"
+            },
+            "batch_norm_offset": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                128
+              ],
+              "dtype": "float32",
+              "size": 128,
+              "strides": [],
+              "dataId": {},
+              "id": 143,
+              "rankType": "1"
+            }
+          },
+          "box_predictor_0": {
+            "box_encoding_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  12
+                ],
+                "dtype": "float32",
+                "size": 6144,
+                "strides": [
+                  6144,
+                  6144,
+                  12
+                ],
+                "dataId": {},
+                "id": 15,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  12
+                ],
+                "dtype": "float32",
+                "size": 12,
+                "strides": [],
+                "dataId": {},
+                "id": 16,
+                "rankType": "1"
+              }
+            },
+            "class_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  9
+                ],
+                "dtype": "float32",
+                "size": 4608,
+                "strides": [
+                  4608,
+                  4608,
+                  9
+                ],
+                "dataId": {},
+                "id": 0,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  9
+                ],
+                "dtype": "float32",
+                "size": 9,
+                "strides": [],
+                "dataId": {},
+                "id": 1,
+                "rankType": "1"
+              }
+            }
+          },
+          "box_predictor_1": {
+            "box_encoding_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  1024,
+                  24
+                ],
+                "dtype": "float32",
+                "size": 24576,
+                "strides": [
+                  24576,
+                  24576,
+                  24
+                ],
+                "dataId": {},
+                "id": 18,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  24
+                ],
+                "dtype": "float32",
+                "size": 24,
+                "strides": [],
+                "dataId": {},
+                "id": 19,
+                "rankType": "1"
+              }
+            },
+            "class_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  1024,
+                  18
+                ],
+                "dtype": "float32",
+                "size": 18432,
+                "strides": [
+                  18432,
+                  18432,
+                  18
+                ],
+                "dataId": {},
+                "id": 2,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  18
+                ],
+                "dtype": "float32",
+                "size": 18,
+                "strides": [],
+                "dataId": {},
+                "id": 3,
+                "rankType": "1"
+              }
+            }
+          },
+          "box_predictor_2": {
+            "box_encoding_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  24
+                ],
+                "dtype": "float32",
+                "size": 12288,
+                "strides": [
+                  12288,
+                  12288,
+                  24
+                ],
+                "dataId": {},
+                "id": 21,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  24
+                ],
+                "dtype": "float32",
+                "size": 24,
+                "strides": [],
+                "dataId": {},
+                "id": 22,
+                "rankType": "1"
+              }
+            },
+            "class_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  512,
+                  18
+                ],
+                "dtype": "float32",
+                "size": 9216,
+                "strides": [
+                  9216,
+                  9216,
+                  18
+                ],
+                "dataId": {},
+                "id": 4,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  18
+                ],
+                "dtype": "float32",
+                "size": 18,
+                "strides": [],
+                "dataId": {},
+                "id": 5,
+                "rankType": "1"
+              }
+            }
+          },
+          "box_predictor_3": {
+            "box_encoding_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  256,
+                  24
+                ],
+                "dtype": "float32",
+                "size": 6144,
+                "strides": [
+                  6144,
+                  6144,
+                  24
+                ],
+                "dataId": {},
+                "id": 24,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  24
+                ],
+                "dtype": "float32",
+                "size": 24,
+                "strides": [],
+                "dataId": {},
+                "id": 25,
+                "rankType": "1"
+              }
+            },
+            "class_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  256,
+                  18
+                ],
+                "dtype": "float32",
+                "size": 4608,
+                "strides": [
+                  4608,
+                  4608,
+                  18
+                ],
+                "dataId": {},
+                "id": 6,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  18
+                ],
+                "dtype": "float32",
+                "size": 18,
+                "strides": [],
+                "dataId": {},
+                "id": 7,
+                "rankType": "1"
+              }
+            }
+          },
+          "box_predictor_4": {
+            "box_encoding_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  256,
+                  24
+                ],
+                "dtype": "float32",
+                "size": 6144,
+                "strides": [
+                  6144,
+                  6144,
+                  24
+                ],
+                "dataId": {},
+                "id": 27,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  24
+                ],
+                "dtype": "float32",
+                "size": 24,
+                "strides": [],
+                "dataId": {},
+                "id": 28,
+                "rankType": "1"
+              }
+            },
+            "class_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  256,
+                  18
+                ],
+                "dtype": "float32",
+                "size": 4608,
+                "strides": [
+                  4608,
+                  4608,
+                  18
+                ],
+                "dataId": {},
+                "id": 8,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  18
+                ],
+                "dtype": "float32",
+                "size": 18,
+                "strides": [],
+                "dataId": {},
+                "id": 9,
+                "rankType": "1"
+              }
+            }
+          },
+          "box_predictor_5": {
+            "box_encoding_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  128,
+                  24
+                ],
+                "dtype": "float32",
+                "size": 3072,
+                "strides": [
+                  3072,
+                  3072,
+                  24
+                ],
+                "dataId": {},
+                "id": 30,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  24
+                ],
+                "dtype": "float32",
+                "size": 24,
+                "strides": [],
+                "dataId": {},
+                "id": 31,
+                "rankType": "1"
+              }
+            },
+            "class_predictor": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  128,
+                  18
+                ],
+                "dtype": "float32",
+                "size": 2304,
+                "strides": [
+                  2304,
+                  2304,
+                  18
+                ],
+                "dataId": {},
+                "id": 10,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  18
+                ],
+                "dtype": "float32",
+                "size": 18,
+                "strides": [],
+                "dataId": {},
+                "id": 11,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "output_layer": {
+          "extra_dim": {
+            "kept": false,
+            "isDisposedInternal": false,
+            "shape": [
+              1,
+              5118,
+              4
+            ],
+            "dtype": "float32",
+            "size": 20472,
+            "strides": [
+              20472,
+              4
+            ],
+            "dataId": {},
+            "id": 150,
+            "rankType": "3"
+          }
+        }
+      },
+      "_paramMappings": [
+        {
+          "originalPath": "Output/extra_dim",
+          "paramPath": "output_layer/extra_dim"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_0_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_0/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_0_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_0/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_1_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_1/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_1_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_1/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_1_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_1/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_1_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_1/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_1_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_1/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_1_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_1/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_1_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_1/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_2_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_2/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_2_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_2/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_2_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_2/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_2_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_2/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_2_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_2/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_2_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_2/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_2_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_2/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_3_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_3/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_3_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_3/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_3_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_3/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_3_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_3/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_3_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_3/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_3_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_3/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_3_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_3/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_4_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_4/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_4_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_4/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_4_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_4/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_4_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_4/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_4_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_4/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_4_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_4/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_4_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_4/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_5_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_5/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_5_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_5/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_5_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_5/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_5_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_5/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_5_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_5/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_5_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_5/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_5_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_5/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_6_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_6/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_6_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_6/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_6_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_6/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_6_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_6/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_6_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_6/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_6_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_6/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_6_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_6/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_7_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_7/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_7_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_7/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_7_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_7/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_7_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_7/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_7_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_7/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_7_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_7/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_7_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_7/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_8_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_8/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_8_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_8/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_8_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_8/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_8_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_8/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_8_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_8/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_8_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_8/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_8_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_8/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_9_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_9/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_9_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_9/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_9_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_9/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_9_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_9/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_9_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_9/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_9_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_9/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_9_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_9/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_10_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_10/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_10_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_10/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_10_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_10/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_10_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_10/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_10_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_10/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_10_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_10/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_10_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_10/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_11_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_11/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_11_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_11/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_11_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_11/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_11_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_11/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_11_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_11/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_11_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_11/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_11_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_11/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_12_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_12/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_12_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_12/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_12_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_12/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_12_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_12/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_12_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_12/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_12_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_12/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_12_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_12/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_13_depthwise/depthwise_weights",
+          "paramPath": "mobilenetv1/conv_13/depthwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_13_depthwise/BatchNorm/gamma",
+          "paramPath": "mobilenetv1/conv_13/depthwise_conv/batch_norm_scale"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_13_depthwise/BatchNorm/beta",
+          "paramPath": "mobilenetv1/conv_13/depthwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_13_depthwise/BatchNorm/moving_mean",
+          "paramPath": "mobilenetv1/conv_13/depthwise_conv/batch_norm_mean"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_13_depthwise/BatchNorm/moving_variance",
+          "paramPath": "mobilenetv1/conv_13/depthwise_conv/batch_norm_variance"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_13_pointwise/weights",
+          "paramPath": "mobilenetv1/conv_13/pointwise_conv/filters"
+        },
+        {
+          "originalPath": "MobilenetV1/Conv2d_13_pointwise/convolution_bn_offset",
+          "paramPath": "mobilenetv1/conv_13/pointwise_conv/batch_norm_offset"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_0_pointwise/weights",
+          "paramPath": "prediction_layer/conv_0/filters"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_0_pointwise/convolution_bn_offset",
+          "paramPath": "prediction_layer/conv_0/batch_norm_offset"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_1_pointwise/weights",
+          "paramPath": "prediction_layer/conv_1/filters"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_1_pointwise/convolution_bn_offset",
+          "paramPath": "prediction_layer/conv_1/batch_norm_offset"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_2_pointwise/weights",
+          "paramPath": "prediction_layer/conv_2/filters"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_2_pointwise/convolution_bn_offset",
+          "paramPath": "prediction_layer/conv_2/batch_norm_offset"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_3_pointwise/weights",
+          "paramPath": "prediction_layer/conv_3/filters"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_3_pointwise/convolution_bn_offset",
+          "paramPath": "prediction_layer/conv_3/batch_norm_offset"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_4_pointwise/weights",
+          "paramPath": "prediction_layer/conv_4/filters"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_4_pointwise/convolution_bn_offset",
+          "paramPath": "prediction_layer/conv_4/batch_norm_offset"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_5_pointwise/weights",
+          "paramPath": "prediction_layer/conv_5/filters"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_5_pointwise/convolution_bn_offset",
+          "paramPath": "prediction_layer/conv_5/batch_norm_offset"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_6_pointwise/weights",
+          "paramPath": "prediction_layer/conv_6/filters"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_6_pointwise/convolution_bn_offset",
+          "paramPath": "prediction_layer/conv_6/batch_norm_offset"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_7_pointwise/weights",
+          "paramPath": "prediction_layer/conv_7/filters"
+        },
+        {
+          "originalPath": "Prediction/Conv2d_7_pointwise/convolution_bn_offset",
+          "paramPath": "prediction_layer/conv_7/batch_norm_offset"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_0/BoxEncodingPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_0/box_encoding_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_0/BoxEncodingPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_0/box_encoding_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_0/ClassPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_0/class_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_0/ClassPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_0/class_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_1/BoxEncodingPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_1/box_encoding_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_1/BoxEncodingPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_1/box_encoding_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_1/ClassPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_1/class_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_1/ClassPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_1/class_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_2/BoxEncodingPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_2/box_encoding_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_2/BoxEncodingPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_2/box_encoding_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_2/ClassPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_2/class_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_2/ClassPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_2/class_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_3/BoxEncodingPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_3/box_encoding_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_3/BoxEncodingPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_3/box_encoding_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_3/ClassPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_3/class_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_3/ClassPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_3/class_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_4/BoxEncodingPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_4/box_encoding_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_4/BoxEncodingPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_4/box_encoding_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_4/ClassPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_4/class_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_4/ClassPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_4/class_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_5/BoxEncodingPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_5/box_encoding_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_5/BoxEncodingPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_5/box_encoding_predictor/bias"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_5/ClassPredictor/weights",
+          "paramPath": "prediction_layer/box_predictor_5/class_predictor/filters"
+        },
+        {
+          "originalPath": "Prediction/BoxPredictor_5/ClassPredictor/biases",
+          "paramPath": "prediction_layer/box_predictor_5/class_predictor/bias"
+        }
+      ]
+    },
+    "tinyFaceDetector": {
+      "_name": "TinyYolov2",
+      "_paramMappings": [],
+      "_config": {
+        "withSeparableConvs": true,
+        "iouThreshold": 0.4,
+        "classes": [
+          "face"
+        ],
+        "anchors": [
+          {
+            "_x": 1.603231,
+            "_y": 2.094468
+          },
+          {
+            "_x": 6.041143,
+            "_y": 7.080126
+          },
+          {
+            "_x": 2.882459,
+            "_y": 3.518061
+          },
+          {
+            "_x": 4.266906,
+            "_y": 5.178857
+          },
+          {
+            "_x": 9.041765,
+            "_y": 10.66308
+          }
+        ],
+        "meanRgb": [
+          117.001,
+          114.697,
+          97.404
+        ],
+        "isFirstLayerConv2d": true,
+        "filterSizes": [
+          3,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512
+        ]
+      }
+    },
+    "tinyYolov2": {
+      "_name": "TinyYolov2",
+      "_paramMappings": [],
+      "_config": {
+        "withSeparableConvs": true,
+        "iouThreshold": 0.4,
+        "classes": [
+          "face"
+        ],
+        "anchors": [
+          {
+            "_x": 1.603231,
+            "_y": 2.094468
+          },
+          {
+            "_x": 6.041143,
+            "_y": 7.080126
+          },
+          {
+            "_x": 2.882459,
+            "_y": 3.518061
+          },
+          {
+            "_x": 4.266906,
+            "_y": 5.178857
+          },
+          {
+            "_x": 9.041765,
+            "_y": 10.66308
+          }
+        ],
+        "meanRgb": [
+          117.001,
+          114.697,
+          97.404
+        ]
+      }
+    },
+    "mtcnn": {
+      "_name": "Mtcnn",
+      "_paramMappings": []
+    },
+    "faceLandmark68Net": {
+      "_name": "FaceLandmark68Net",
+      "_params": {
+        "fc": {
+          "weights": {
+            "kept": false,
+            "isDisposedInternal": false,
+            "shape": [
+              256,
+              136
+            ],
+            "dtype": "float32",
+            "size": 34816,
+            "strides": [
+              136
+            ],
+            "dataId": {},
+            "id": 198,
+            "rankType": "2"
+          },
+          "bias": {
+            "kept": false,
+            "isDisposedInternal": false,
+            "shape": [
+              136
+            ],
+            "dtype": "float32",
+            "size": 136,
+            "strides": [],
+            "dataId": {},
+            "id": 199,
+            "rankType": "1"
+          }
+        }
+      },
+      "_paramMappings": [
+        {
+          "originalPath": "fc/weights",
+          "paramPath": "fc/weights"
+        },
+        {
+          "originalPath": "fc/bias",
+          "paramPath": "fc/bias"
+        }
+      ],
+      "_faceFeatureExtractor": {
+        "_name": "FaceFeatureExtractor",
+        "_params": {
+          "dense0": {
+            "conv0": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  3,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 864,
+                "strides": [
+                  288,
+                  96,
+                  32
+                ],
+                "dataId": {},
+                "id": 151,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 152,
+                "rankType": "1"
+              }
+            },
+            "conv1": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 288,
+                "strides": [
+                  96,
+                  32,
+                  1
+                ],
+                "dataId": {},
+                "id": 153,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  32,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 1024,
+                "strides": [
+                  1024,
+                  1024,
+                  32
+                ],
+                "dataId": {},
+                "id": 154,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 155,
+                "rankType": "1"
+              }
+            },
+            "conv2": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 288,
+                "strides": [
+                  96,
+                  32,
+                  1
+                ],
+                "dataId": {},
+                "id": 156,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  32,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 1024,
+                "strides": [
+                  1024,
+                  1024,
+                  32
+                ],
+                "dataId": {},
+                "id": 157,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 158,
+                "rankType": "1"
+              }
+            },
+            "conv3": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 288,
+                "strides": [
+                  96,
+                  32,
+                  1
+                ],
+                "dataId": {},
+                "id": 159,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  32,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 1024,
+                "strides": [
+                  1024,
+                  1024,
+                  32
+                ],
+                "dataId": {},
+                "id": 160,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 161,
+                "rankType": "1"
+              }
+            }
+          },
+          "dense1": {
+            "conv0": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 288,
+                "strides": [
+                  96,
+                  32,
+                  1
+                ],
+                "dataId": {},
+                "id": 162,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  32,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 2048,
+                "strides": [
+                  2048,
+                  2048,
+                  64
+                ],
+                "dataId": {},
+                "id": 163,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 164,
+                "rankType": "1"
+              }
+            },
+            "conv1": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 576,
+                "strides": [
+                  192,
+                  64,
+                  1
+                ],
+                "dataId": {},
+                "id": 165,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 4096,
+                "strides": [
+                  4096,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 166,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 167,
+                "rankType": "1"
+              }
+            },
+            "conv2": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 576,
+                "strides": [
+                  192,
+                  64,
+                  1
+                ],
+                "dataId": {},
+                "id": 168,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 4096,
+                "strides": [
+                  4096,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 169,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 170,
+                "rankType": "1"
+              }
+            },
+            "conv3": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 576,
+                "strides": [
+                  192,
+                  64,
+                  1
+                ],
+                "dataId": {},
+                "id": 171,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 4096,
+                "strides": [
+                  4096,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 172,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 173,
+                "rankType": "1"
+              }
+            }
+          },
+          "dense2": {
+            "conv0": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 576,
+                "strides": [
+                  192,
+                  64,
+                  1
+                ],
+                "dataId": {},
+                "id": 174,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  64,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 8192,
+                "strides": [
+                  8192,
+                  8192,
+                  128
+                ],
+                "dataId": {},
+                "id": 175,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 176,
+                "rankType": "1"
+              }
+            },
+            "conv1": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 1152,
+                "strides": [
+                  384,
+                  128,
+                  1
+                ],
+                "dataId": {},
+                "id": 177,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 16384,
+                "strides": [
+                  16384,
+                  16384,
+                  128
+                ],
+                "dataId": {},
+                "id": 178,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 179,
+                "rankType": "1"
+              }
+            },
+            "conv2": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 1152,
+                "strides": [
+                  384,
+                  128,
+                  1
+                ],
+                "dataId": {},
+                "id": 180,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 16384,
+                "strides": [
+                  16384,
+                  16384,
+                  128
+                ],
+                "dataId": {},
+                "id": 181,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 182,
+                "rankType": "1"
+              }
+            },
+            "conv3": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 1152,
+                "strides": [
+                  384,
+                  128,
+                  1
+                ],
+                "dataId": {},
+                "id": 183,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 16384,
+                "strides": [
+                  16384,
+                  16384,
+                  128
+                ],
+                "dataId": {},
+                "id": 184,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 185,
+                "rankType": "1"
+              }
+            }
+          },
+          "dense3": {
+            "conv0": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 1152,
+                "strides": [
+                  384,
+                  128,
+                  1
+                ],
+                "dataId": {},
+                "id": 186,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  128,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 32768,
+                "strides": [
+                  32768,
+                  32768,
+                  256
+                ],
+                "dataId": {},
+                "id": 187,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 188,
+                "rankType": "1"
+              }
+            },
+            "conv1": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 2304,
+                "strides": [
+                  768,
+                  256,
+                  1
+                ],
+                "dataId": {},
+                "id": 189,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 65536,
+                "strides": [
+                  65536,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 190,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 191,
+                "rankType": "1"
+              }
+            },
+            "conv2": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 2304,
+                "strides": [
+                  768,
+                  256,
+                  1
+                ],
+                "dataId": {},
+                "id": 192,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 65536,
+                "strides": [
+                  65536,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 193,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 194,
+                "rankType": "1"
+              }
+            },
+            "conv3": {
+              "depthwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  1
+                ],
+                "dtype": "float32",
+                "size": 2304,
+                "strides": [
+                  768,
+                  256,
+                  1
+                ],
+                "dataId": {},
+                "id": 195,
+                "rankType": "4"
+              },
+              "pointwise_filter": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  1,
+                  1,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 65536,
+                "strides": [
+                  65536,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 196,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 197,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "_paramMappings": [
+          {
+            "originalPath": "dense0/conv0/filters",
+            "paramPath": "dense0/conv0/filters"
+          },
+          {
+            "originalPath": "dense0/conv0/bias",
+            "paramPath": "dense0/conv0/bias"
+          },
+          {
+            "originalPath": "dense0/conv1/depthwise_filter",
+            "paramPath": "dense0/conv1/depthwise_filter"
+          },
+          {
+            "originalPath": "dense0/conv1/pointwise_filter",
+            "paramPath": "dense0/conv1/pointwise_filter"
+          },
+          {
+            "originalPath": "dense0/conv1/bias",
+            "paramPath": "dense0/conv1/bias"
+          },
+          {
+            "originalPath": "dense0/conv2/depthwise_filter",
+            "paramPath": "dense0/conv2/depthwise_filter"
+          },
+          {
+            "originalPath": "dense0/conv2/pointwise_filter",
+            "paramPath": "dense0/conv2/pointwise_filter"
+          },
+          {
+            "originalPath": "dense0/conv2/bias",
+            "paramPath": "dense0/conv2/bias"
+          },
+          {
+            "originalPath": "dense0/conv3/depthwise_filter",
+            "paramPath": "dense0/conv3/depthwise_filter"
+          },
+          {
+            "originalPath": "dense0/conv3/pointwise_filter",
+            "paramPath": "dense0/conv3/pointwise_filter"
+          },
+          {
+            "originalPath": "dense0/conv3/bias",
+            "paramPath": "dense0/conv3/bias"
+          },
+          {
+            "originalPath": "dense1/conv0/depthwise_filter",
+            "paramPath": "dense1/conv0/depthwise_filter"
+          },
+          {
+            "originalPath": "dense1/conv0/pointwise_filter",
+            "paramPath": "dense1/conv0/pointwise_filter"
+          },
+          {
+            "originalPath": "dense1/conv0/bias",
+            "paramPath": "dense1/conv0/bias"
+          },
+          {
+            "originalPath": "dense1/conv1/depthwise_filter",
+            "paramPath": "dense1/conv1/depthwise_filter"
+          },
+          {
+            "originalPath": "dense1/conv1/pointwise_filter",
+            "paramPath": "dense1/conv1/pointwise_filter"
+          },
+          {
+            "originalPath": "dense1/conv1/bias",
+            "paramPath": "dense1/conv1/bias"
+          },
+          {
+            "originalPath": "dense1/conv2/depthwise_filter",
+            "paramPath": "dense1/conv2/depthwise_filter"
+          },
+          {
+            "originalPath": "dense1/conv2/pointwise_filter",
+            "paramPath": "dense1/conv2/pointwise_filter"
+          },
+          {
+            "originalPath": "dense1/conv2/bias",
+            "paramPath": "dense1/conv2/bias"
+          },
+          {
+            "originalPath": "dense1/conv3/depthwise_filter",
+            "paramPath": "dense1/conv3/depthwise_filter"
+          },
+          {
+            "originalPath": "dense1/conv3/pointwise_filter",
+            "paramPath": "dense1/conv3/pointwise_filter"
+          },
+          {
+            "originalPath": "dense1/conv3/bias",
+            "paramPath": "dense1/conv3/bias"
+          },
+          {
+            "originalPath": "dense2/conv0/depthwise_filter",
+            "paramPath": "dense2/conv0/depthwise_filter"
+          },
+          {
+            "originalPath": "dense2/conv0/pointwise_filter",
+            "paramPath": "dense2/conv0/pointwise_filter"
+          },
+          {
+            "originalPath": "dense2/conv0/bias",
+            "paramPath": "dense2/conv0/bias"
+          },
+          {
+            "originalPath": "dense2/conv1/depthwise_filter",
+            "paramPath": "dense2/conv1/depthwise_filter"
+          },
+          {
+            "originalPath": "dense2/conv1/pointwise_filter",
+            "paramPath": "dense2/conv1/pointwise_filter"
+          },
+          {
+            "originalPath": "dense2/conv1/bias",
+            "paramPath": "dense2/conv1/bias"
+          },
+          {
+            "originalPath": "dense2/conv2/depthwise_filter",
+            "paramPath": "dense2/conv2/depthwise_filter"
+          },
+          {
+            "originalPath": "dense2/conv2/pointwise_filter",
+            "paramPath": "dense2/conv2/pointwise_filter"
+          },
+          {
+            "originalPath": "dense2/conv2/bias",
+            "paramPath": "dense2/conv2/bias"
+          },
+          {
+            "originalPath": "dense2/conv3/depthwise_filter",
+            "paramPath": "dense2/conv3/depthwise_filter"
+          },
+          {
+            "originalPath": "dense2/conv3/pointwise_filter",
+            "paramPath": "dense2/conv3/pointwise_filter"
+          },
+          {
+            "originalPath": "dense2/conv3/bias",
+            "paramPath": "dense2/conv3/bias"
+          },
+          {
+            "originalPath": "dense3/conv0/depthwise_filter",
+            "paramPath": "dense3/conv0/depthwise_filter"
+          },
+          {
+            "originalPath": "dense3/conv0/pointwise_filter",
+            "paramPath": "dense3/conv0/pointwise_filter"
+          },
+          {
+            "originalPath": "dense3/conv0/bias",
+            "paramPath": "dense3/conv0/bias"
+          },
+          {
+            "originalPath": "dense3/conv1/depthwise_filter",
+            "paramPath": "dense3/conv1/depthwise_filter"
+          },
+          {
+            "originalPath": "dense3/conv1/pointwise_filter",
+            "paramPath": "dense3/conv1/pointwise_filter"
+          },
+          {
+            "originalPath": "dense3/conv1/bias",
+            "paramPath": "dense3/conv1/bias"
+          },
+          {
+            "originalPath": "dense3/conv2/depthwise_filter",
+            "paramPath": "dense3/conv2/depthwise_filter"
+          },
+          {
+            "originalPath": "dense3/conv2/pointwise_filter",
+            "paramPath": "dense3/conv2/pointwise_filter"
+          },
+          {
+            "originalPath": "dense3/conv2/bias",
+            "paramPath": "dense3/conv2/bias"
+          },
+          {
+            "originalPath": "dense3/conv3/depthwise_filter",
+            "paramPath": "dense3/conv3/depthwise_filter"
+          },
+          {
+            "originalPath": "dense3/conv3/pointwise_filter",
+            "paramPath": "dense3/conv3/pointwise_filter"
+          },
+          {
+            "originalPath": "dense3/conv3/bias",
+            "paramPath": "dense3/conv3/bias"
+          }
+        ]
+      }
+    },
+    "faceLandmark68TinyNet": {
+      "_name": "FaceLandmark68TinyNet",
+      "_paramMappings": [],
+      "_faceFeatureExtractor": {
+        "_name": "TinyFaceFeatureExtractor",
+        "_paramMappings": []
+      }
+    },
+    "faceRecognitionNet": {
+      "_name": "FaceRecognitionNet",
+      "_params": {
+        "conv32_down": {
+          "conv": {
+            "filters": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                7,
+                7,
+                3,
+                32
+              ],
+              "dtype": "float32",
+              "size": 4704,
+              "strides": [
+                672,
+                96,
+                32
+              ],
+              "dataId": {},
+              "id": 200,
+              "rankType": "4"
+            },
+            "bias": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                32
+              ],
+              "dtype": "float32",
+              "size": 32,
+              "strides": [],
+              "dataId": {},
+              "id": 201,
+              "rankType": "1"
+            }
+          },
+          "scale": {
+            "weights": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                32
+              ],
+              "dtype": "float32",
+              "size": 32,
+              "strides": [],
+              "dataId": {},
+              "id": 202,
+              "rankType": "1"
+            },
+            "biases": {
+              "kept": false,
+              "isDisposedInternal": false,
+              "shape": [
+                32
+              ],
+              "dtype": "float32",
+              "size": 32,
+              "strides": [],
+              "dataId": {},
+              "id": 203,
+              "rankType": "1"
+            }
+          }
+        },
+        "conv32_1": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 9216,
+                "strides": [
+                  3072,
+                  1024,
+                  32
+                ],
+                "dataId": {},
+                "id": 204,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 205,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 206,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 207,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 9216,
+                "strides": [
+                  3072,
+                  1024,
+                  32
+                ],
+                "dataId": {},
+                "id": 208,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 209,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 210,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 211,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv32_2": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 9216,
+                "strides": [
+                  3072,
+                  1024,
+                  32
+                ],
+                "dataId": {},
+                "id": 212,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 213,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 214,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 215,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 9216,
+                "strides": [
+                  3072,
+                  1024,
+                  32
+                ],
+                "dataId": {},
+                "id": 216,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 217,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 218,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 219,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv32_3": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 9216,
+                "strides": [
+                  3072,
+                  1024,
+                  32
+                ],
+                "dataId": {},
+                "id": 220,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 221,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 222,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 223,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  32
+                ],
+                "dtype": "float32",
+                "size": 9216,
+                "strides": [
+                  3072,
+                  1024,
+                  32
+                ],
+                "dataId": {},
+                "id": 224,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 225,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 226,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  32
+                ],
+                "dtype": "float32",
+                "size": 32,
+                "strides": [],
+                "dataId": {},
+                "id": 227,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv64_down": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  32,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 18432,
+                "strides": [
+                  6144,
+                  2048,
+                  64
+                ],
+                "dataId": {},
+                "id": 228,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 229,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 230,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 231,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 36864,
+                "strides": [
+                  12288,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 232,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 233,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 234,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 235,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv64_1": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 36864,
+                "strides": [
+                  12288,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 236,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 237,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 238,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 239,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 36864,
+                "strides": [
+                  12288,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 240,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 241,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 242,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 243,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv64_2": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 36864,
+                "strides": [
+                  12288,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 244,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 245,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 246,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 247,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 36864,
+                "strides": [
+                  12288,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 248,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 249,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 250,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 251,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv64_3": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 36864,
+                "strides": [
+                  12288,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 252,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 253,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 254,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 255,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  64
+                ],
+                "dtype": "float32",
+                "size": 36864,
+                "strides": [
+                  12288,
+                  4096,
+                  64
+                ],
+                "dataId": {},
+                "id": 256,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 257,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 258,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  64
+                ],
+                "dtype": "float32",
+                "size": 64,
+                "strides": [],
+                "dataId": {},
+                "id": 259,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv128_down": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  64,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 73728,
+                "strides": [
+                  24576,
+                  8192,
+                  128
+                ],
+                "dataId": {},
+                "id": 260,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 261,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 262,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 263,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 147456,
+                "strides": [
+                  49152,
+                  16384,
+                  128
+                ],
+                "dataId": {},
+                "id": 264,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 265,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 266,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 267,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv128_1": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 147456,
+                "strides": [
+                  49152,
+                  16384,
+                  128
+                ],
+                "dataId": {},
+                "id": 268,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 269,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 270,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 271,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 147456,
+                "strides": [
+                  49152,
+                  16384,
+                  128
+                ],
+                "dataId": {},
+                "id": 272,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 273,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 274,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 275,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv128_2": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 147456,
+                "strides": [
+                  49152,
+                  16384,
+                  128
+                ],
+                "dataId": {},
+                "id": 276,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 277,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 278,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 279,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  128
+                ],
+                "dtype": "float32",
+                "size": 147456,
+                "strides": [
+                  49152,
+                  16384,
+                  128
+                ],
+                "dataId": {},
+                "id": 280,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 281,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 282,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  128
+                ],
+                "dtype": "float32",
+                "size": 128,
+                "strides": [],
+                "dataId": {},
+                "id": 283,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv256_down": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  128,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 294912,
+                "strides": [
+                  98304,
+                  32768,
+                  256
+                ],
+                "dataId": {},
+                "id": 284,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 285,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 286,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 287,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 589824,
+                "strides": [
+                  196608,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 288,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 289,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 290,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 291,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv256_1": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 589824,
+                "strides": [
+                  196608,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 292,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 293,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 294,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 295,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 589824,
+                "strides": [
+                  196608,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 296,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 297,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 298,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 299,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv256_2": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 589824,
+                "strides": [
+                  196608,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 300,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 301,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 302,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 303,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 589824,
+                "strides": [
+                  196608,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 304,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 305,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 306,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 307,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "conv256_down_out": {
+          "conv1": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 589824,
+                "strides": [
+                  196608,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 308,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 309,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 310,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 311,
+                "rankType": "1"
+              }
+            }
+          },
+          "conv2": {
+            "conv": {
+              "filters": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  3,
+                  3,
+                  256,
+                  256
+                ],
+                "dtype": "float32",
+                "size": 589824,
+                "strides": [
+                  196608,
+                  65536,
+                  256
+                ],
+                "dataId": {},
+                "id": 312,
+                "rankType": "4"
+              },
+              "bias": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 313,
+                "rankType": "1"
+              }
+            },
+            "scale": {
+              "weights": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 314,
+                "rankType": "1"
+              },
+              "biases": {
+                "kept": false,
+                "isDisposedInternal": false,
+                "shape": [
+                  256
+                ],
+                "dtype": "float32",
+                "size": 256,
+                "strides": [],
+                "dataId": {},
+                "id": 315,
+                "rankType": "1"
+              }
+            }
+          }
+        },
+        "fc": {
+          "kept": false,
+          "isDisposedInternal": false,
+          "shape": [
+            256,
+            128
+          ],
+          "dtype": "float32",
+          "size": 32768,
+          "strides": [
+            128
+          ],
+          "dataId": {},
+          "id": 316,
+          "rankType": "2"
+        }
+      },
+      "_paramMappings": [
+        {
+          "originalPath": "conv32_down/conv/filters",
+          "paramPath": "conv32_down/conv/filters"
+        },
+        {
+          "originalPath": "conv32_down/conv/bias",
+          "paramPath": "conv32_down/conv/bias"
+        },
+        {
+          "originalPath": "conv32_down/scale/weights",
+          "paramPath": "conv32_down/scale/weights"
+        },
+        {
+          "originalPath": "conv32_down/scale/biases",
+          "paramPath": "conv32_down/scale/biases"
+        },
+        {
+          "originalPath": "conv32_1/conv1/conv/filters",
+          "paramPath": "conv32_1/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv32_1/conv1/conv/bias",
+          "paramPath": "conv32_1/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv32_1/conv1/scale/weights",
+          "paramPath": "conv32_1/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv32_1/conv1/scale/biases",
+          "paramPath": "conv32_1/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv32_1/conv2/conv/filters",
+          "paramPath": "conv32_1/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv32_1/conv2/conv/bias",
+          "paramPath": "conv32_1/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv32_1/conv2/scale/weights",
+          "paramPath": "conv32_1/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv32_1/conv2/scale/biases",
+          "paramPath": "conv32_1/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv32_2/conv1/conv/filters",
+          "paramPath": "conv32_2/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv32_2/conv1/conv/bias",
+          "paramPath": "conv32_2/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv32_2/conv1/scale/weights",
+          "paramPath": "conv32_2/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv32_2/conv1/scale/biases",
+          "paramPath": "conv32_2/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv32_2/conv2/conv/filters",
+          "paramPath": "conv32_2/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv32_2/conv2/conv/bias",
+          "paramPath": "conv32_2/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv32_2/conv2/scale/weights",
+          "paramPath": "conv32_2/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv32_2/conv2/scale/biases",
+          "paramPath": "conv32_2/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv32_3/conv1/conv/filters",
+          "paramPath": "conv32_3/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv32_3/conv1/conv/bias",
+          "paramPath": "conv32_3/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv32_3/conv1/scale/weights",
+          "paramPath": "conv32_3/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv32_3/conv1/scale/biases",
+          "paramPath": "conv32_3/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv32_3/conv2/conv/filters",
+          "paramPath": "conv32_3/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv32_3/conv2/conv/bias",
+          "paramPath": "conv32_3/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv32_3/conv2/scale/weights",
+          "paramPath": "conv32_3/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv32_3/conv2/scale/biases",
+          "paramPath": "conv32_3/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv64_down/conv1/conv/filters",
+          "paramPath": "conv64_down/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv64_down/conv1/conv/bias",
+          "paramPath": "conv64_down/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv64_down/conv1/scale/weights",
+          "paramPath": "conv64_down/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv64_down/conv1/scale/biases",
+          "paramPath": "conv64_down/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv64_down/conv2/conv/filters",
+          "paramPath": "conv64_down/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv64_down/conv2/conv/bias",
+          "paramPath": "conv64_down/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv64_down/conv2/scale/weights",
+          "paramPath": "conv64_down/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv64_down/conv2/scale/biases",
+          "paramPath": "conv64_down/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv64_1/conv1/conv/filters",
+          "paramPath": "conv64_1/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv64_1/conv1/conv/bias",
+          "paramPath": "conv64_1/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv64_1/conv1/scale/weights",
+          "paramPath": "conv64_1/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv64_1/conv1/scale/biases",
+          "paramPath": "conv64_1/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv64_1/conv2/conv/filters",
+          "paramPath": "conv64_1/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv64_1/conv2/conv/bias",
+          "paramPath": "conv64_1/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv64_1/conv2/scale/weights",
+          "paramPath": "conv64_1/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv64_1/conv2/scale/biases",
+          "paramPath": "conv64_1/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv64_2/conv1/conv/filters",
+          "paramPath": "conv64_2/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv64_2/conv1/conv/bias",
+          "paramPath": "conv64_2/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv64_2/conv1/scale/weights",
+          "paramPath": "conv64_2/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv64_2/conv1/scale/biases",
+          "paramPath": "conv64_2/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv64_2/conv2/conv/filters",
+          "paramPath": "conv64_2/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv64_2/conv2/conv/bias",
+          "paramPath": "conv64_2/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv64_2/conv2/scale/weights",
+          "paramPath": "conv64_2/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv64_2/conv2/scale/biases",
+          "paramPath": "conv64_2/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv64_3/conv1/conv/filters",
+          "paramPath": "conv64_3/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv64_3/conv1/conv/bias",
+          "paramPath": "conv64_3/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv64_3/conv1/scale/weights",
+          "paramPath": "conv64_3/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv64_3/conv1/scale/biases",
+          "paramPath": "conv64_3/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv64_3/conv2/conv/filters",
+          "paramPath": "conv64_3/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv64_3/conv2/conv/bias",
+          "paramPath": "conv64_3/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv64_3/conv2/scale/weights",
+          "paramPath": "conv64_3/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv64_3/conv2/scale/biases",
+          "paramPath": "conv64_3/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv128_down/conv1/conv/filters",
+          "paramPath": "conv128_down/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv128_down/conv1/conv/bias",
+          "paramPath": "conv128_down/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv128_down/conv1/scale/weights",
+          "paramPath": "conv128_down/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv128_down/conv1/scale/biases",
+          "paramPath": "conv128_down/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv128_down/conv2/conv/filters",
+          "paramPath": "conv128_down/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv128_down/conv2/conv/bias",
+          "paramPath": "conv128_down/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv128_down/conv2/scale/weights",
+          "paramPath": "conv128_down/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv128_down/conv2/scale/biases",
+          "paramPath": "conv128_down/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv128_1/conv1/conv/filters",
+          "paramPath": "conv128_1/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv128_1/conv1/conv/bias",
+          "paramPath": "conv128_1/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv128_1/conv1/scale/weights",
+          "paramPath": "conv128_1/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv128_1/conv1/scale/biases",
+          "paramPath": "conv128_1/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv128_1/conv2/conv/filters",
+          "paramPath": "conv128_1/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv128_1/conv2/conv/bias",
+          "paramPath": "conv128_1/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv128_1/conv2/scale/weights",
+          "paramPath": "conv128_1/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv128_1/conv2/scale/biases",
+          "paramPath": "conv128_1/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv128_2/conv1/conv/filters",
+          "paramPath": "conv128_2/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv128_2/conv1/conv/bias",
+          "paramPath": "conv128_2/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv128_2/conv1/scale/weights",
+          "paramPath": "conv128_2/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv128_2/conv1/scale/biases",
+          "paramPath": "conv128_2/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv128_2/conv2/conv/filters",
+          "paramPath": "conv128_2/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv128_2/conv2/conv/bias",
+          "paramPath": "conv128_2/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv128_2/conv2/scale/weights",
+          "paramPath": "conv128_2/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv128_2/conv2/scale/biases",
+          "paramPath": "conv128_2/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv256_down/conv1/conv/filters",
+          "paramPath": "conv256_down/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv256_down/conv1/conv/bias",
+          "paramPath": "conv256_down/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv256_down/conv1/scale/weights",
+          "paramPath": "conv256_down/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv256_down/conv1/scale/biases",
+          "paramPath": "conv256_down/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv256_down/conv2/conv/filters",
+          "paramPath": "conv256_down/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv256_down/conv2/conv/bias",
+          "paramPath": "conv256_down/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv256_down/conv2/scale/weights",
+          "paramPath": "conv256_down/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv256_down/conv2/scale/biases",
+          "paramPath": "conv256_down/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv256_1/conv1/conv/filters",
+          "paramPath": "conv256_1/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv256_1/conv1/conv/bias",
+          "paramPath": "conv256_1/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv256_1/conv1/scale/weights",
+          "paramPath": "conv256_1/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv256_1/conv1/scale/biases",
+          "paramPath": "conv256_1/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv256_1/conv2/conv/filters",
+          "paramPath": "conv256_1/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv256_1/conv2/conv/bias",
+          "paramPath": "conv256_1/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv256_1/conv2/scale/weights",
+          "paramPath": "conv256_1/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv256_1/conv2/scale/biases",
+          "paramPath": "conv256_1/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv256_2/conv1/conv/filters",
+          "paramPath": "conv256_2/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv256_2/conv1/conv/bias",
+          "paramPath": "conv256_2/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv256_2/conv1/scale/weights",
+          "paramPath": "conv256_2/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv256_2/conv1/scale/biases",
+          "paramPath": "conv256_2/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv256_2/conv2/conv/filters",
+          "paramPath": "conv256_2/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv256_2/conv2/conv/bias",
+          "paramPath": "conv256_2/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv256_2/conv2/scale/weights",
+          "paramPath": "conv256_2/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv256_2/conv2/scale/biases",
+          "paramPath": "conv256_2/conv2/scale/biases"
+        },
+        {
+          "originalPath": "conv256_down_out/conv1/conv/filters",
+          "paramPath": "conv256_down_out/conv1/conv/filters"
+        },
+        {
+          "originalPath": "conv256_down_out/conv1/conv/bias",
+          "paramPath": "conv256_down_out/conv1/conv/bias"
+        },
+        {
+          "originalPath": "conv256_down_out/conv1/scale/weights",
+          "paramPath": "conv256_down_out/conv1/scale/weights"
+        },
+        {
+          "originalPath": "conv256_down_out/conv1/scale/biases",
+          "paramPath": "conv256_down_out/conv1/scale/biases"
+        },
+        {
+          "originalPath": "conv256_down_out/conv2/conv/filters",
+          "paramPath": "conv256_down_out/conv2/conv/filters"
+        },
+        {
+          "originalPath": "conv256_down_out/conv2/conv/bias",
+          "paramPath": "conv256_down_out/conv2/conv/bias"
+        },
+        {
+          "originalPath": "conv256_down_out/conv2/scale/weights",
+          "paramPath": "conv256_down_out/conv2/scale/weights"
+        },
+        {
+          "originalPath": "conv256_down_out/conv2/scale/biases",
+          "paramPath": "conv256_down_out/conv2/scale/biases"
+        },
+        {
+          "originalPath": "fc",
+          "paramPath": "fc"
+        }
+      ]
+    },
+    "faceExpressionNet": {
+      "_name": "FaceExpressionNet",
+      "_paramMappings": [],
+      "_faceFeatureExtractor": {
+        "_name": "FaceFeatureExtractor",
+        "_paramMappings": []
+      }
+    },
+    "ageGenderNet": {
+      "_name": "AgeGenderNet",
+      "_paramMappings": [],
+      "_faceFeatureExtractor": {
+        "_name": "TinyXception",
+        "_paramMappings": [],
+        "_numMainBlocks": 2
+      }
+    }
+  },
+  "tf": {
+    "backend_util": {
+      "PARALLELIZE_THRESHOLD": 30
+    },
+    "browser": {},
+    "fused": {},
+    "gather_util": {},
+    "image": {},
+    "io": {},
+    "linalg": {},
+    "losses": {},
+    "math": {},
+    "scatter_util": {},
+    "serialization": {},
+    "signal": {},
+    "slice_util": {},
+    "spectral": {},
+    "tensor_util": {},
+    "test_util": {
+      "TEST_EPSILON_FLOAT16": 0.1
+    },
+    "train": {},
+    "util": {},
+    "version_core": "1.7.0",
+    "webgl": {
+      "gpgpu_util": {},
+      "webgl_util": {}
+    }
+  },
+  "utils": {}
+}
