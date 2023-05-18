@@ -3,6 +3,7 @@ const MODEL_URL = './models'
 let startTime = new Date()
 let fullFaceDescriptions
 const canvas = document.getElementById('overlay')
+let imgFiles
 
 // Get a reference to the video element in your HTML
 const videoElement = document.getElementById('videoElement');
@@ -55,31 +56,41 @@ const input = document.getElementById('videoElement')
 
 async function analyseFace() {
 
-  loadStaticFaces().then(()=>{
-    setInterval(async () => {
-      fullFaceDescriptions = await faceapi.detectAllFaces(input).withFaceLandmarks().withFaceDescriptors()
-      canvas.width = 640
-      canvas.height = 480
-      console.log(fullFaceDescriptions)
-  
-      faceapi.draw.drawDetections(canvas, fullFaceDescriptions)
-      // faceapi.draw.drawFaceLandmarks(canvas, fullFaceDescriptions)
-      recogniseFace()
-    }, 5000)
-  })
+  fetch('http://localhost:5000/files')
+  .then(response => response.json())
+  .then(data => {
 
+    imgFiles = data;
+
+    loadStaticFaces().then(()=>{
+      setInterval(async () => {
+        fullFaceDescriptions = await faceapi.detectAllFaces(input).withFaceLandmarks().withFaceDescriptors()
+        canvas.width = 640
+        canvas.height = 480
+        console.log(fullFaceDescriptions)
+    
+        faceapi.draw.drawDetections(canvas, fullFaceDescriptions)
+        // faceapi.draw.drawFaceLandmarks(canvas, fullFaceDescriptions)
+        recogniseFace()
+      }, 800)
+    })  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 
 }
 
 let labeledFaceDescriptors
 
 async function loadStaticFaces() {
-  const labels = ['emma', 'justin', 'aditya']
+  // const labels = imgFiles
+  const labels = removeExtension(imgFiles)
+  
 
   labeledFaceDescriptors = await Promise.all(
     labels.map(async label => {
       // fetch image data from urls and convert blob to HTMLImage element
-      const imgUrl = `./images/${label}.png`
+      const imgUrl = `./images/${label}.jpeg`
       const img = await faceapi.fetchImage(imgUrl)
 
       // detect the face with the highest score in the image and compute it's landmarks and face descriptor
@@ -112,6 +123,17 @@ async function recogniseFace() {
     drawBox.draw(canvas)
   })
 
+}
+
+function removeExtension(names) {
+  // console.log(names)
+  let newNames = []
+  names.map((name)=> {
+    newName = name.substring(0, name.lastIndexOf('.'))
+    newNames.push(newName)
+    return
+  })
+  return newNames
 }
 
 
