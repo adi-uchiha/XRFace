@@ -1,0 +1,41 @@
+.register{
+  display: flex;
+  flex-direction: row;
+}
+.left-div{
+  display: flex;
+  flex-direction: column;
+}
+.form-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.styled-input {
+  background-color: #F7FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 4px;
+  padding: 8px;
+  color: #000000;
+  line-height: 1.25;
+  outline: none;
+}
+
+.styled-input:focus {
+  background-color: #FFFFFF;
+  border-color: #4299E1;
+}
+
+.styled-label {
+  color: #4A5568;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.videoElement {
+  width: 400px;
+  height: 300px;
+}
+#btn-div {
+  width: min-content;
+}

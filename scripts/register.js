@@ -2,6 +2,12 @@
 const startButton = document.getElementById('startButton');
 const videoElement = document.getElementById('videoElement');
 var captureButton = document.getElementById('captureButton');
+var downloadLink = document.createElement('a');
+
+// downloadLink.addEventListener('click', function(event) {
+//   event.preventDefault();
+// });
+
 captureButton.addEventListener('click', capturePhoto);
 
 startButton.addEventListener('click', async () => {
@@ -33,12 +39,18 @@ function capturePhoto() {
   // Convert the canvas image to a data URL
   var photoData = canvasElement.toDataURL('image/jpeg');
 
-  // Create a link element to download the photo
-  var downloadLink = document.createElement('a');
+ 
+
   downloadLink.href = photoData;
   downloadLink.download = fileName;
 
+  
   // Programmatically trigger the download
+  document.body.appendChild(downloadLink); // Append the link element to the DOM
   downloadLink.click();
+  document.body.removeChild(downloadLink);
+
 }
+
+
 

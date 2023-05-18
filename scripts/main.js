@@ -121,6 +121,7 @@ async function recogniseFace() {
     console.log(text)
     const drawBox = new faceapi.draw.DrawBox(box, { label: text })
     drawBox.draw(canvas)
+    faceapi.draw.drawFaceLandmarks(canvas, fullFaceDescriptions[i])
   })
 
 }

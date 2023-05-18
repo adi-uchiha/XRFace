@@ -4,21 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/register.css">
   <title>Register</title>
 </head>
 <body>
   <div class="register">
-    <div class="web-cam-div">
-      <video id="videoElement"></video>
-      <canvas id="canvas" width="640" height="480"></canvas>
-      <button id="startButton">Start</button>
-      <button id="captureButton">Capture Photo</button>
+    <div class="left-div">
+      <video class="videoElement" id="videoElement"></video>
+      <canvas id="canvas" height="200"></canvas>
 
-      <label for="frist-name">Enter Frist Name</label>
-      <input id="first-name" name="frist-name" type="text">
+      <div class="btn-div">
+        <button id="startButton">Start</button>
+        <button id="captureButton">Capture Photo</button>
+      </div>
+    </div>
+    <div class="form-div">
 
-      <label for="second-name">Enter Second Name</label>
-      <input id="second-name" name="second-name" type="text">
+      <label class="styled-label" for="frist-name">Enter Frist Name</label>
+      <input class="styled-input" id="first-name" name="frist-name" type="text">
+      
+      <label class="styled-label" for="second-name">Enter Second Name</label>
+      <input class="styled-input" id="second-name" name="second-name" type="text">
       <a href="./index.html">Index</a>
     </div>
   </div>
