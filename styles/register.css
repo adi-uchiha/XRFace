@@ -5,20 +5,25 @@
 .left-div{
   display: flex;
   flex-direction: column;
+  width: 500px;
 }
 .form-div{
   display: flex;
   flex-direction: column;
+  margin: 60px;
 }
 
 .styled-input {
   background-color: #F7FAFC;
   border: 1px solid #E2E8F0;
+  font-size: 20px;
   border-radius: 4px;
   padding: 8px;
   color: #000000;
   line-height: 1.25;
   outline: none;
+  margin: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .styled-input:focus {
@@ -28,7 +33,9 @@
 
 .styled-label {
   color: #4A5568;
-  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -39,3 +46,26 @@
 #btn-div {
   width: min-content;
 }
+
+.styled-button {
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.styled-button.blue{
+  background-color: #4299E1;
+}
+.styled-button.yellow{
+  background-color: rgb(235, 235, 66);
+}
+
+.styled-button:hover {
+  border: 1px solid black;
+}
+

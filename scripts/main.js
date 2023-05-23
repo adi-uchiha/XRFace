@@ -37,19 +37,16 @@ loadMyModels().then((res) => {
   let executionTime = endTime - startTime
 
   console.log("%cDone loading the models", 'color: rgb(115, 240, 148); font-weight: light; background-color: black')
-  console.log(`Time taken by models to load Execution time %c${executionTime} ms`, 'color: red')
+  console.log(`Time taken by models to load %c${executionTime} ms`, 'color: red')
   startTime = new Date()
 
 
   analyseFace().then((res) => {
     endTime = new Date()
     executionTime = endTime - startTime
-    console.log(`Time taken for analysis %c${executionTime} ms`, 'color: red')
 
   })
-
 })
-
 const input = document.getElementById('videoElement')
 
 
@@ -59,10 +56,13 @@ async function analyseFace() {
   fetch('http://localhost:5000/files')
   .then(response => response.json())
   .then(data => {
-
+    
     imgFiles = data;
-
+    startTime = new Date()
     loadStaticFaces().then(()=>{
+      endTime = new Date()
+      let loadingTime = endTime - startTime
+      console.log(`Done Loading Static Data %c${loadingTime}ms`, 'color: red')
       setInterval(async () => {
         fullFaceDescriptions = await faceapi.detectAllFaces(input).withFaceLandmarks().withFaceDescriptors()
         canvas.width = 640
@@ -72,7 +72,7 @@ async function analyseFace() {
         faceapi.draw.drawDetections(canvas, fullFaceDescriptions)
         // faceapi.draw.drawFaceLandmarks(canvas, fullFaceDescriptions)
         recogniseFace()
-      }, 800)
+      }, 8000)
     })  })
   .catch(error => {
     console.error('Error:', error);
@@ -90,7 +90,7 @@ async function loadStaticFaces() {
   labeledFaceDescriptors = await Promise.all(
     labels.map(async label => {
       // fetch image data from urls and convert blob to HTMLImage element
-      const imgUrl = `./images/${label}.jpeg`
+      const imgUrl = `./backend/images/${label}.jpeg`
       const img = await faceapi.fetchImage(imgUrl)
 
       // detect the face with the highest score in the image and compute it's landmarks and face descriptor
@@ -104,7 +104,6 @@ async function loadStaticFaces() {
       return new faceapi.LabeledFaceDescriptors(label, faceDescriptors)
     })
   )
-  console.log("Loaded Static Data")
   
 }
 

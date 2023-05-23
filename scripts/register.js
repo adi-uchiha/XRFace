@@ -24,6 +24,13 @@ function capturePhoto() {
 
   const firstName = document.getElementById('first-name').value
   const secondName = document.getElementById('second-name').value
+ 
+
+  console.log(firstName, secondName)
+  if(secondName === '' || firstName === ''){
+    console.log('%cPlease Enter your details', 'color: red; background-color: white')
+    return 
+  }
 
   const fileName = firstName.toLowerCase() + '-' + secondName.toLowerCase()
 
@@ -52,5 +59,12 @@ function capturePhoto() {
 
 }
 
+
+
+
+function randomFill() {
+  console.log("Random")
+  return 0
+}
 
 

@@ -4,7 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/register.css">
+
+  <link rel="stylesheet" href="./styles/register.css">  
+
+  <link rel="icon" type="image/x-icon" href="/assets/face-without-corners.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+
   <title>Register</title>
 </head>
 <body>
@@ -14,20 +22,48 @@
       <canvas id="canvas" height="200"></canvas>
 
       <div class="btn-div">
-        <button id="startButton">Start</button>
-        <button id="captureButton">Capture Photo</button>
+        <button class="styled-button yellow" id="startButton">Start</button>
+        <button class="styled-button blue" id="captureButton">Capture Photo</button>
       </div>
     </div>
     <div class="form-div">
-
-      <label class="styled-label" for="frist-name">Enter Frist Name</label>
-      <input class="styled-input" id="first-name" name="frist-name" type="text">
       
-      <label class="styled-label" for="second-name">Enter Second Name</label>
-      <input class="styled-input" id="second-name" name="second-name" type="text">
+      <h1 style="  font-family: 'Montserrat', sans-serif;">Enter Details</h1>
+
+      <div class="frist-name-div">
+        <label class="styled-label" for="first-name">Enter Frist Name: &nbsp; &nbsp;</label>
+        <input class="styled-input" id="first-name" name="frist-name" type="text">
+      </div>
+      
+      <div class="second-name-div">
+        <label class="styled-label" for="second-name">Enter Second Name:</label>
+        <input class="styled-input" id="second-name" name="second-name" type="text">
+      </div>
+
+      <div class="other-details">
+        <label class="styled-label" for="application-Id">Application Id: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+        <input class="styled-input" id="application-Id" name="application-Id" type="text">
+      </div>
+
+      <div class="gender-radio">
+        <label for="male" class="styled-label">Enter Gender: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+        <label for="male" class="styled-label radio-label">
+          <input type="radio" id="male" name="gender" value="male" class="radio-input">
+          Male
+        </label>
+        <label for="female" class="styled-label radio-label">
+          <input type="radio" id="female" name="gender" value="female" class="radio-input">
+          Female
+        </label>
+      </div>
+      
       <a href="./index.html">Index</a>
+
+      <button id="post-button">Post</button>
     </div>
   </div>
 </body>
 <script src="./scripts/register.js"></script>
+<script src="./scripts/details-upload.js"></script>
+
 </html>
