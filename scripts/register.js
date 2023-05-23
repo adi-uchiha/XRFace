@@ -60,11 +60,3 @@ function capturePhoto() {
 }
 
 
-
-
-function randomFill() {
-  console.log("Random")
-  return 0
-}
-
-

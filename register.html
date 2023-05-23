@@ -10,16 +10,26 @@
   <link rel="icon" type="image/x-icon" href="/assets/face-without-corners.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&family=Roboto+Serif:wght@500&display=swap" rel="stylesheet">
 
   <title>Register</title>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-icon">
+      <img src="./assets/face-without-corners.svg" width="90px" height="90px" alt="" srcset="">
+    </div>
+
+    <h1 class="nav-heading">XR-Face</h1>
+
+    <img src="./assets/burger.png" class="nav-burger" width="50px" height="50px" alt="" srcset="">
+  </nav>
   <div class="register">
+    
     <div class="left-div">
       <video class="videoElement" id="videoElement"></video>
-      <canvas id="canvas" height="200"></canvas>
+      <canvas id="canvas"></canvas>
 
       <div class="btn-div">
         <button class="styled-button yellow" id="startButton">Start</button>
@@ -46,9 +56,9 @@
       </div>
 
       <div class="gender-radio">
-        <label for="male" class="styled-label">Enter Gender: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+        <label for="male" class="styled-label">Gender: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
         <label for="male" class="styled-label radio-label">
-          <input type="radio" id="male" name="gender" value="male" class="radio-input">
+          <input checked type="radio" id="male" name="gender" value="male" class="radio-input">
           Male
         </label>
         <label for="female" class="styled-label radio-label">
@@ -56,10 +66,21 @@
           Female
         </label>
       </div>
-      
+
+      <div class="email-div">
+        <label class="styled-label" for="email">Email:</label>
+        <input class="styled-input" id="email" name="email" type="text">
+      </div>
+
+      <div class="phone">
+        <label class="styled-label" for="phone">Phone:</label>
+        <input value="+91" class="styled-input" id="phone" name="phone" type="text">
+      </div>
+
+      <button class="styled-button post-button" id="post-button">Post</button>
+
       <a href="./index.html">Index</a>
 
-      <button id="post-button">Post</button>
     </div>
   </div>
 </body>
