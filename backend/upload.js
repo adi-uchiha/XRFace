@@ -30,8 +30,9 @@ app.post('/uploadUser', (req, res) => {
   }
 
   // Generate a unique filename for the JSON file
-  const fileName = `user_${Date.now()}.json`;
-  const filePath = `./users/${fileName}`;
+  const fileName = userData.FristName;
+  const secondName = userData.SecondName;
+  const filePath = `./users/${fileName}-${secondName}.json`;
 
   // Write the user data to a JSON file
   fs.writeFile(filePath, JSON.stringify(userData, null, 2), (err) => {
@@ -43,6 +44,32 @@ app.post('/uploadUser', (req, res) => {
     res.status(200).send('File created successfully.');
   });
 });
+
+app.get('/getUser/:fileName', (req, res) => {
+  const fileName = req.params.fileName;
+  const filePath = `./users/${fileName}.json`;
+
+  // Read the file asynchronously
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error reading file');
+    }
+
+    let user;
+
+    try {
+      user = JSON.parse(data);
+    } catch (error) {
+      console.error(error);
+      return res.status(500).send('Error parsing JSON file');
+    }
+
+    res.json(user);
+  });
+});
+
+
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

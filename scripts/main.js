@@ -67,12 +67,12 @@ async function analyseFace() {
         fullFaceDescriptions = await faceapi.detectAllFaces(input).withFaceLandmarks().withFaceDescriptors()
         canvas.width = 640
         canvas.height = 480
-        console.log(fullFaceDescriptions)
+        // console.log(fullFaceDescriptions)
     
         faceapi.draw.drawDetections(canvas, fullFaceDescriptions)
         // faceapi.draw.drawFaceLandmarks(canvas, fullFaceDescriptions)
         recogniseFace()
-      }, 8000)
+      }, 900)
     })  })
   .catch(error => {
     console.error('Error:', error);
@@ -114,13 +114,18 @@ async function recogniseFace() {
 
   const results = fullFaceDescriptions.map(fd => faceMatcher.findBestMatch(fd.descriptor))
 
+  let foundFaces = []
+
   results.forEach((bestMatch, i) => {
     const box = fullFaceDescriptions[i].detection.box
     const text = bestMatch.toString()
-    console.log(text)
     const drawBox = new faceapi.draw.DrawBox(box, { label: text })
     drawBox.draw(canvas)
     faceapi.draw.drawFaceLandmarks(canvas, fullFaceDescriptions[i])
+
+    foundFaces.push(text.replace(/\s*\(.+\)$/, ''))
+    // console.log(foundFaces)
+    handleFoundFaces(foundFaces)
   })
 
 }
@@ -136,6 +141,58 @@ function removeExtension(names) {
   return newNames
 }
 
+function handleFoundFaces(foundFaces) {
 
+  function fetchDataForFiles(foundFaces) {
+    const fetchPromises = foundFaces.map(foundFace => {
+      const url = `http://localhost:3000/getUser/${foundFace}`;
+      return fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error: ' + response.status);
+          }
+          return response.json();
+        })
+        .then(data => {
+          // console.log(`Data for ${foundFace}:`, data);
+          return data; // Return the fetched data if needed
+        })
+        .catch(error => {
+          console.error(`Error fetching data for ${foundFace}:`, error.message);
+          // Handle any errors that occurred during the request
+        });
+    });
+  
+    return Promise.all(fetchPromises);
+  }
+  
+  // Usage example:
 
+  fetchDataForFiles(foundFaces)
+    .then(dataArray => {
+      renderUser(dataArray)
+      console.log('All data fetched:', dataArray);
+      // Handle the fetched data for all files
+    })
+    .catch(error => {
+      console.error('Error:', error.message);
+      // Handle any errors that occurred during the fetch
+    });
+  
+}
 
+function renderUser(user) {
+  const userContainer = document.getElementById('userContainer');
+  userContainer.innerHTML = ''; // Clear previous data
+
+  const userParagraph = document.createElement('p');
+  userParagraph.textContent = JSON.stringify(user);
+  userContainer.appendChild(userParagraph);
+
+  userParagraph.classList.add('user-info', 'highlighted');
+}
+
+// Usage example:
+dataArray.forEach(user => {
+  renderUser(user);
+});
